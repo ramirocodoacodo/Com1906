@@ -1,4 +1,4 @@
-package poo.u01;
+package poo.u02;
 
 public class Ej03 {
 
