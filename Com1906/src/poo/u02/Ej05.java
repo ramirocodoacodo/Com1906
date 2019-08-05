@@ -7,7 +7,7 @@ public class Ej05 {
 		System.out.println(disco1.toString());
 		DiscoMusical disco2 = new DiscoMusical("Nevermind", "Nirvana", 1991);
 		System.out.println(disco2.toString());
-		
+		// test
 	}
 
 }
