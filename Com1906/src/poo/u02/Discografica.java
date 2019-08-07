@@ -14,8 +14,13 @@ public class Discografica {
 	
 	public boolean agregarDisco(DiscoMusical disco) {
 		// Codigo del método
-		cont++;
-		return true;
+		if (cont < discografia.length) {
+			discografia[cont] = disco;
+			cont++;
+			return true;
+		} else {
+			return false;
+		}
 	}
 	
 	public String toString() {
@@ -29,6 +34,9 @@ public class Discografica {
 		return texto;
 	}
 	
-	
+	public DiscoMusical buscar(String autor) { 
+		// Código 
+		return null;
+	}
 	
 }
