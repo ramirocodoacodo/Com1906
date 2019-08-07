@@ -8,7 +8,6 @@ public class Ej03 {
 		System.out.println(Contador.CONT);
 		Contador cont2 = new Contador();
 		System.out.println(Contador.CONT);
-		
 	}
 
 }
