@@ -1,8 +1,11 @@
-package poo.u02;
+package poo.u03;
 
 import javax.swing.JOptionPane;
 
-public class Ej05 {
+import poo.u02.DiscoMusical;
+import poo.u02.Discografica;
+
+public class MainDiscografica {
 
 	public static void main(String[] args) {
 		DiscoMusical disco1  = new DiscoMusical();
@@ -28,9 +31,7 @@ public class Ej05 {
 		discografica.agregarDisco(disco7);
 		
 		JOptionPane.showMessageDialog(null, discografica.toString());
-		
-		JOptionPane.showMessageDialog(null, disco2.equals(disco3));
-		JOptionPane.showMessageDialog(null, disco2.equals(disco1));
+
 	}
 
 }
