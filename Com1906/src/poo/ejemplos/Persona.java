@@ -4,8 +4,9 @@ import javax.swing.JOptionPane;
 
 public class Persona {
 	// Atributos
-	private String nombre;
+	protected String nombre;
 	private String apellido;
+	// private String matricula;
 	private int dni;
 	private int edad;
 	
@@ -31,13 +32,27 @@ public class Persona {
 	public void caminar() {
 		System.out.println("Caminando...");
 	}
-	public String miNombre() {
+	public String getNombre() {
 		return nombre;
 	}
 	public void cambiarNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public String miApellido() {
+	public String getApellido() {
 		return apellido;
 	}
+
+	
+	
+	public int getEdad() {
+		return edad;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Persona [nombre=" + nombre + ", apellido=" + apellido + ", dni=" + dni + "]";
+	}
+	
+	
 }

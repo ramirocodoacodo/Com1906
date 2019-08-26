@@ -1,6 +1,8 @@
 package poo.u03;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+
 import poo.u02.DiscoMusical;
 
 public class Discografica {
@@ -18,12 +20,14 @@ public class Discografica {
 	
 	public boolean agregarDisco(DiscoMusical disco) {
 		// Codigo del método
-			discografia.add(disco);
-			cont++;
-			return true;
+		return discografia.add(disco);
+			// cont++;
+			// return true;
 	}
 	
 	public String toString() {
+		Iterator<DiscoMusical> it = discografia.iterator();
+		
 		String texto = "";
 		DiscoMusical disco;
 		// Codigo del método
@@ -33,8 +37,13 @@ public class Discografica {
 			texto += disco.toString() + "\n";
 		}
 		*/
-		for (DiscoMusical discoMusical : discografia) {
+		/*for (DiscoMusical discoMusical : discografia) {
 			texto += discoMusical.toString() + "\n";
+		}
+		*/
+		while (it.hasNext()) {
+			disco = it.next();
+			texto += disco.toString() + "\n";
 		}
 		return texto;
 	}
@@ -42,6 +51,21 @@ public class Discografica {
 	public DiscoMusical buscar(String autor) { 
 		// Código 
 		return null;
+	}
+	
+	public DiscoMusical buscar(String titulo, String autor, int anioEdicion) { 
+		// Código 
+		return null;
+	}
+	
+	public boolean existe(DiscoMusical disco) { 
+		// Código 
+		return false;
+	}
+	
+	public int buscar(DiscoMusical disco) { 
+		// Código 
+		return discografia.indexOf(disco);
 	}
 	
 }
