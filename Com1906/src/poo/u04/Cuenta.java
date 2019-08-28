@@ -15,13 +15,21 @@ public class Cuenta {
 	}
 
 	public Cuenta(String dniTitular, double saldo) {
-
-		this.dniTitular = dniTitular;
+		titular = new Persona(dniTitular);
 		this.saldo = saldo;
 	}
 
+	public Cuenta(String dniTitular, String nombre, int edad, String genero, double saldo) {
+		Persona aux = new Persona(dniTitular, nombre, edad, genero);
+		if (aux.esMayorDeEdad())
+			titular = aux;
+		if (saldo >= 0)
+			this.saldo = saldo;
+	}
+
 	public String toString() {
-		return "dniTitular= " + dniTitular + ", saldo= " + saldo;
+		// return "dniTitular= " + titular.getDni() + ", saldo= " + saldo;
+		return titular.toString() + ", saldo= " + saldo;
 	}
 
 	/*
@@ -59,11 +67,7 @@ public class Cuenta {
 	}
 
 	public String getDniTitular() {
-		return dniTitular;
-	}
-
-	public void setDniTitular(String dniTitular) {
-		this.dniTitular = dniTitular;
+		return titular.getDni();
 	}
 
 	public double getSaldo() {

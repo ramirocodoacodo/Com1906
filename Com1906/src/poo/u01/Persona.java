@@ -15,7 +15,8 @@ public class Persona {
 		domicilio = new Domicilio();
 	}
 	
-	public Persona(String nombre, int edad, String genero) {
+	public Persona(String dni, String nombre, int edad, String genero) {
+		this.dni = dni;
 		this.nombre = nombre;
 		this.edad = edad;
 		this.genero = genero;
@@ -35,6 +36,16 @@ public class Persona {
 		domicilio = new Domicilio(calle, num, cp);
 	}
 	
+	
+	
+	public String getDni() {
+		return dni;
+	}
+
+	public void setDni(String dni) {
+		this.dni = dni;
+	}
+
 	public int getEdad() {
 		return edad;
 	}
@@ -65,6 +76,12 @@ public class Persona {
 
 	public void setEdad(int edad) {
 		this.edad = edad;
+	}
+	
+	public boolean esMayorDeEdad() {
+		if (edad>=18)
+			return true;
+		return false;
 	}
 
 	public String toString() {
