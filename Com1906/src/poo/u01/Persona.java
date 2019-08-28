@@ -1,19 +1,38 @@
 package poo.u01;
 
+import poo.u04.Domicilio;
+
 public class Persona {
 	private String nombre;
+	private String dni;
 	private double altura;
 	private int edad;
 	private String genero;
+	private Domicilio domicilio;
 
-	public Persona(String nombre) {
-		this.nombre = nombre;
+	public Persona(String dni) {
+		this.dni = dni;
+		domicilio = new Domicilio();
 	}
 	
 	public Persona(String nombre, int edad, String genero) {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.genero = genero;
+		domicilio = new Domicilio();
+	}
+	
+	public Persona(String nombre, int edad, String calle, int num, String cp) {
+		this.nombre = nombre;
+		this.edad = edad;
+		domicilio = new Domicilio(calle, num, cp);
+	}
+	
+	public Persona(String nombre, String dni, int edad, String calle, int num, String cp) {
+		this.nombre = nombre;
+		this.dni = dni;
+		this.edad = edad;
+		domicilio = new Domicilio(calle, num, cp);
 	}
 	
 	public int getEdad() {
@@ -48,5 +67,8 @@ public class Persona {
 		this.edad = edad;
 	}
 
-	
+	public String toString() {
+		return "Nombre: " + nombre + ", Edad: " + edad + 
+				", " + domicilio.toString();
+	}
 }
