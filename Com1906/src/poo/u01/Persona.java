@@ -85,7 +85,7 @@ public class Persona {
 	}
 
 	public String toString() {
-		return "Nombre: " + nombre + ", Edad: " + edad + 
+		return "Nombre: " + nombre + ", DNI: " + dni + ", Edad: " + edad + 
 				", " + domicilio.toString();
 	}
 }

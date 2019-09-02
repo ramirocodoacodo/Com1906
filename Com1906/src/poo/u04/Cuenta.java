@@ -2,11 +2,11 @@ package poo.u04;
 
 import poo.u01.Persona;
 
-public class Cuenta {
+public abstract class Cuenta {
 
 	// private String dniTitular;
 	private Persona titular;
-	private double saldo;
+	protected double saldo;
 	//private double importe;
 
 	public Cuenta(String dniTitular) {
@@ -74,4 +74,7 @@ public class Cuenta {
 		return saldo;
 	}
 
+	public boolean esMayorDeEdad() {
+		return titular.esMayorDeEdad();
+	}
 }
