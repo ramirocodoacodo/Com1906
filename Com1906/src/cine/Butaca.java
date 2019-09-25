@@ -46,6 +46,17 @@ public class Butaca {
 		return false;
 	}
 
+	public boolean liberar() {
+		if (estado.equals("O")) {
+			this.estado = "L";
+			return true;
+		}
+		return false;
+	}
+	
+	public void pasillo() {
+		estado = "X";
+	}
 	
 	@Override
 	public String toString() {
